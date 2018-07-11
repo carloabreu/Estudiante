@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Blog Personal</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/login-api.js"></script>
+    <script src="assets/js/login.js"></script>
+
+    <script>
+        var token = window.localStorage.getItem("token");
+        $(document).ready(function (){
+
+            $("#btnSalir").click(()=>{
+                /*if(token == null){
+                    window.location = "login.html";
+                }*/
+
+                LoginApi.logout(token)
+                .then(function (data) {
+                    window.localStorage.removeItem("token");
+                    window.location = "login.html";
+                })
+                .catch(error => console.log(error));
+            });
+            });
+        </script>
+    </head>
+    <body background="playa1.jpg">
+        <font face="Algerian" color="lightgreen">
+            <br>
+            <h1><marquee behavior="alternate">Bienvenido a Mi Blog Tecnologico</marquee></h1>
+            <button id="btnSalir" type="button">Logout</button>   
+        </body>
+        </html>

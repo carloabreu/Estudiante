@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title style="color: silver">Blog API - LOGIN</title>
+    <link rel="stylesheet" href=" css/estilo.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/login-api.js"></script>
+    <script src="assets/js/login.js">
+        
+    var token = window.localStorage.getItem("token");
+
+    if (token != null){
+        window.location = "login.html";
+    }
+
+    </script>
+</head>
+
+<body background="playa.jpg">
+
+    <font face="Algerian" color="darkblue">
+
+    <div class="container">
+
+        <div class ="row">
+
+            <div class="col">
+                
+                <h1 class="header"><marquee behavior="alternate" width="550">BLOG API - LOGIN</marquee></h1>
+            </div>
+            </div>
+</font>
+        <div class ="row">
+
+            <div class="col-md-6">
+        <form>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" required>
+  </div>
+
+<div  class="text-right"><b>
+    <a href="registrar.html" style="color:#0101DF;"> + Registrar </a>
+  <button type="button" id="btnLogin" class="btn btn-primary" style="color: white">Login</button>
+</div>
+</form>
+        
+</div>
+</div>
+</div>
+
+</body>
+</html>
